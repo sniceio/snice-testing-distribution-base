@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build & Push Container
-      run: make build push
+      run: make login build push
