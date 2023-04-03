@@ -4,6 +4,7 @@
     <name>Snice Testing Distribution Base</name>
     <groupId>io.snice</groupId>
     <artifactId>snice-testing-distribution-base</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <description>Snice Testing Distribution - The docker base image for distributing the Snice Testing Framework</description>
