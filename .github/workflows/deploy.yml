@@ -13,5 +13,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build & Push Container
       run: |
-        docker login -u  ${{ secrets.REGISTRY_SNICEIO_USER }} -p ${{ REGISTRY_SNICEIO_SECRET }} registry.snice.io
+        docker login -u  ${{ secrets.REGISTRY_SNICEIO_USER }} -p ${{ secrets.REGISTRY_SNICEIO_SECRET }} registry.snice.io
         make build push
