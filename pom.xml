@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>Snice Testing Distribution Base</name>
+    <groupId>io.snice</groupId>
+    <artifactId>snice-testing-distribution-base</artifactId>
+    <packaging>pom</packaging>
+
+    <description>Snice Testing Distribution - The docker base image for distributing the Snice Testing Framework</description>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+    <inceptionYear>2023</inceptionYear>
+
+    <developers>
+        <developer>
+            <name>Jonas Borjesson</name>
+            <email>borjesson.jonas@gmail.com</email>
+            <timezone>-8</timezone>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:sniceio/snice-testing-distribution-base.git</connection>
+	<developerConnection>scm:git:https://github.com/sniceio/snice-testing-distribution-base.git</developerConnection>
+        <url>git@github.com:sniceio/snice-testing-distribution-base.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <io.snice.testing.version>0.0.5</io.snice.testing.version>
+        <maven.dependency.plugin.version>3.4.0</maven.dependency.plugin.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>io.snice</groupId>
+            <artifactId>snice-testing-core</artifactId>
+            <version>${io.snice.testing.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.snice</groupId>
+            <artifactId>snice-testing-runtime</artifactId>
+            <version>${io.snice.testing.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.snice</groupId>
+            <artifactId>snice-testing-http</artifactId>
+            <version>${io.snice.testing.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+    </build>
+
+</project>

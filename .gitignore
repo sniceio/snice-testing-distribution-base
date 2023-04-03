@@ -1,0 +1,26 @@
+# Make sure to ignore Eclipse files
+.classpath
+.project
+.settings
+
+# Intellij
+*.iml
+.idea
+
+# Where maven compiles by default
+target
+dependency-reduced-pom.xml
+
+# Where we generate our libraries for building the docker image
+lib
+
+# Java Files that should be ignored
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Backup files
+*.bak
