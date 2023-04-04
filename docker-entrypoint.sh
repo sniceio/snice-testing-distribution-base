@@ -9,4 +9,9 @@ export SNICE_SERVICE_ID=`sha1sum <<<"$SNICE_PRIMARY_HOST_IP"|tr a-z A-Z|cut -c1-
 
 CLASSPATH=$(JARS=(lib/*.jar); IFS=:; echo "${JARS[*]}")
 
+if [ -d "lib_user" ] 
+then
+CLASSPATH=$CLASSPATH:$(JARS=(lib_user/*.jar); IFS=:; echo "${JARS[*]}")
+fi
+
 exec java -Djava.net.preferIPv4Stack=true -Dlogback.configurationFile=file:logback.xml -cp "$CLASSPATH" io.snice.testing.runtime.Snice "$@"
